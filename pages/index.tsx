@@ -76,7 +76,7 @@ export const getStaticProps: GetStaticProps = async () => {
     bodyClass: BodyClass({ isHome: true }),
   }
 
-  console.timeEnd('Index - getStaticProps -')
+  console.timeEnd('Index - getStaticProps')
 
   return {
     props: {
