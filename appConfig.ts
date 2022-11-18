@@ -11,7 +11,7 @@ export const gaMeasurementId: string = 'UA-XXXXXXX_or_G-XXXXXXX'
 
 // Dark mode
 export type DarkMode = 'dark' | 'light' | null
-export const defaultMode: DarkMode = 'light'
+export const defaultMode: DarkMode = 'dark'
 export const overrideOS: boolean = true
 
 // Images
