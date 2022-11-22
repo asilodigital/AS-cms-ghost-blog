@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 import { SiteNav } from '@components/SiteNav'
 import { HeaderBackground } from '@components/HeaderBackground'
+import { useOverlay } from '@components/contexts/overlayProvider'
 import { getLang, get } from '@utils/use-lang'
 import { GhostSettings, NextImage } from '@lib/ghost'
 
@@ -28,6 +29,8 @@ export const HeaderIndex = ({ settings }: HeaderIndexProps) => {
     return (targetHeight * width) / height
   }
 
+  const { handleOpen } = useOverlay()
+
   return (
     <header className="site-home-header">
       <HeaderBackground srcImg={coverImg}>
@@ -35,10 +38,12 @@ export const HeaderIndex = ({ settings }: HeaderIndexProps) => {
           <SiteNav className="site-nav" {...{ siteUrl, settings }} />
           <div className="site-header-content">
             <h1 className="site-title">
+              {/* title */"La tecnología, explicada por personas como tú"}
+             {/*  La tecnología, explicada por personas como tú */}
               {siteLogo && nextFeatureImages ? (
                 <Link href="/">
                   <a>
-                    <div
+                    {/* <div
                       className="site-logo"
                       style={{
                         marginTop: '8px',
@@ -47,21 +52,29 @@ export const HeaderIndex = ({ settings }: HeaderIndexProps) => {
                       }}
                     >
                       <Image src={siteLogo.url} alt={title} layout="responsive" quality={imageQuality} {...siteLogo.dimensions} />
-                    </div>
+                    </div> */}
                   </a>
                 </Link>
               ) : site.logo ? (
                 <Link href="/">
                   <a>
                     {/* eslint-disable @next/next/no-img-element */}
-                    <img className="site-logo" src={site.logo} alt={title} />
+                    {/* <img className="site-logo" src={site.logo} alt={title} /> */}
                   </a>
                 </Link>
               ) : (
                 title
               )}
             </h1>
-            <h2 className="site-description">{site.description}</h2>
+            <h2 className="site-description">{/* site.description */"Hacemos de la información tecnológica en español algo colaborativo y abierto, manteniendo siempre el enfoque en la comunidad"}</h2>
+            <div className="site-header-buttons-container">
+              <a onClick={() => alert("hello")} type="button" className="site-header-buttons">
+                Escribir un artículo
+              </a>
+              <a type="button" className="site-header-buttons" style={{ color: "black", backgroundColor: "white"}} onClick={handleOpen}>
+                {text(`SUBSCRIBE_ME`)}
+              </a>
+            </div>
           </div>
         </div>
       </HeaderBackground>
