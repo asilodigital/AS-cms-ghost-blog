@@ -22,10 +22,10 @@ export const SubscribeOverlay = ({ settings }: { settings: GhostSettings }) => {
       <a className="subscribe-close-overlay" onClick={handleClose}></a>
       <a className="subscribe-close-button" onClick={handleClose}></a>
       <div className="subscribe-overlay-content">
-        {siteLogo && <img className="subscribe-overlay-logo" src={siteLogo} alt={title} />}
         <div className="subscribe-form">
+        {siteLogo && <img className="subscribe-overlay-logo" src={siteLogo} alt={title} />}
           <h1 className="subscribe-overlay-title">
-            {text(`SUBSCRIBE_TO`)} {title}
+            {/* {text(`SUBSCRIBE_TO`)} {title} */}
           </h1>
           <p className="subscribe-overlay-description">{text(`SUBSCRIBE_OVERLAY`)}</p>
           <SubscribeForm {...{ settings }} />

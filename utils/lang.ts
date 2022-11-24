@@ -191,7 +191,7 @@ export const lang: KeyObjectMap = {
     MULTIPLE_AUTHORS: `Varios autores`,
     DARK_MODE: `Modo oscuro`,
     CHECK_YOUR_INBOX: `Revisa tu bandeja de entrada y haz clic en el enlace que encontrarás`,
-    EMAIL: `Correo electrónico`,
+    EMAIL: `Correo`,
     ENTER_VALID_EMAIL: `Introduzca una dirección de correo válida`,
     GREAT: `Genial`,
     SUBSCRIBE: `Suscribirse`,

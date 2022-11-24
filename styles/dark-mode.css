@@ -195,7 +195,8 @@ html.casper body.dark .site-header-content .author-profile-image {
 
 html.casper body.dark .subscribe-form {
   border: none;
-  background: linear-gradient(color-mod(var(--darkmode) l(-6%)), color-mod(var(--darkmode) l(-3%)));
+  /* background: linear-gradient(color-mod(var(--darkmode) l(-6%)), color-mod(var(--darkmode) l(-3%))); */
+  background: linear-gradient(#13111D, #110f1b);
 }
 
 html.casper body.dark .subscribe-form-title {
@@ -213,7 +214,7 @@ html.casper body.dark .subscribe-email {
 }
 
 html.casper body.dark .subscribe-email:focus {
-  border-color: color-mod(var(--darkmode) l(+25%));
+  border-color: color-mod(var(--lightgrey) l(+25%));
 }
 
 html.casper body.dark .subscribe-form button {
