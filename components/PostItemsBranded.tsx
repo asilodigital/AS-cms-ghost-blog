@@ -10,7 +10,7 @@ interface PostItemsProps {
 
 export const PostItemsBranded = ({ settings, posts, isHome }: PostItemsProps) => {
   const brandedPosts = posts.filter((post) => {
-    return post.tags?.some((tag) => tag.name === 'Branded Content' || tag.name === 'Entretenimiento')
+    return post.tags?.some((tag) => tag.name === 'Branded Content')
   })
 
   const isBranded = true
