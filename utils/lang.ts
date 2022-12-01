@@ -8,6 +8,7 @@ export interface KeyObjectMap {
 
 export const lang: KeyObjectMap = {
   en: {
+    BRANDED: 'Branded',
     A_COLLECTION_OF: `A collection of`,
     BY: `by`,
     BY_THIS_AUTHOR: `by this author`,
@@ -168,6 +169,7 @@ export const lang: KeyObjectMap = {
     TABLE_OF_CONTENTS: `Inhaltsverzeichnis`,
   },
   es: {
+    BRANDED: `Promocionado`,
     A_COLLECTION_OF: `Una colección de`,
     BY: `de`,
     BY_THIS_AUTHOR: `de este autor`,

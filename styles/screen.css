@@ -236,6 +236,7 @@ html.casper .site-home-header .site-header-content .site-header-buttons-containe
 @media (max-width: 800px) {
     html.casper .site-home-header .site-header-content .site-header-buttons-container .site-header-buttons {
         font-size: 1.2rem;
+        padding: 15px 32px;
     }
 }
 
@@ -567,11 +568,11 @@ html.casper .social-link-rss svg {
 html.casper .subscribe-button {
     display: block;
     margin: 0 0 0 10px;
-    padding: 4px 10px;
+    padding: 10px 20px;
     border: #fff 1px solid;
     color: #fff;
     line-height: 1em;
-    border-radius: 10px;
+    border-radius: 37px;
     opacity: 0.8;
 }
 
@@ -679,6 +680,27 @@ html.casper .post-card-image {
 
     object-fit: cover;
 }
+
+/* styles for isBranded tag class */
+html.casper .post-card .post-card-branded {
+    border: 1px solid #7100E2;
+    border-radius: 20px;
+    padding: 4px 10px;
+    width: 170px;
+    margin-top: 15px;
+    background-color: #7100E2;
+}
+
+html.casper .post-card .post-card-branded .post-card-branded-text {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #fff;
+}
+
 
 html.casper .post-card-content-link {
     position: relative;
@@ -2783,6 +2805,14 @@ html.casper .subscribe-overlay .subscribe-form {
     background: none;
     width: 425px;
 }
+
+ /* styles for mobile subscribe form */
+ @media (max-width: 800px) {
+    html.casper .subscribe-overlay .subscribe-form {
+        width: 95vw;
+    }
+}
+
 
 html.casper .subscribe-overlay-logo {
     top: 23px;
