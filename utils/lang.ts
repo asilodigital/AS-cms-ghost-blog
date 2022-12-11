@@ -8,6 +8,7 @@ export interface KeyObjectMap {
 
 export const lang: KeyObjectMap = {
   en: {
+    BRANDED: 'Branded',
     A_COLLECTION_OF: `A collection of`,
     BY: `by`,
     BY_THIS_AUTHOR: `by this author`,
@@ -35,6 +36,7 @@ export const lang: KeyObjectMap = {
     ENTER_VALID_EMAIL: `Please enter a valid email address`,
     GREAT: `Great`,
     SUBSCRIBE: `Subscribe`,
+    SUBSCRIBE_ME: `Subscribe me`,
     SUBSCRIBE_OVERLAY: `Stay up to date! Get all the latest & greatest posts delivered straight to your inbox`,
     SUBSCRIBE_SECTION: `Get the latest posts delivered right to your inbox`,
     SUBSCRIBE_TO: `Subscribe to`,
@@ -167,6 +169,7 @@ export const lang: KeyObjectMap = {
     TABLE_OF_CONTENTS: `Inhaltsverzeichnis`,
   },
   es: {
+    BRANDED: `Promocionado`,
     A_COLLECTION_OF: `Una colección de`,
     BY: `de`,
     BY_THIS_AUTHOR: `de este autor`,
@@ -190,10 +193,11 @@ export const lang: KeyObjectMap = {
     MULTIPLE_AUTHORS: `Varios autores`,
     DARK_MODE: `Modo oscuro`,
     CHECK_YOUR_INBOX: `Revisa tu bandeja de entrada y haz clic en el enlace que encontrarás`,
-    EMAIL: `Correo electrónico`,
+    EMAIL: `Correo`,
     ENTER_VALID_EMAIL: `Introduzca una dirección de correo válida`,
     GREAT: `Genial`,
     SUBSCRIBE: `Suscribirse`,
+    SUBSCRIBE_ME: `Suscribirme`,
     SUBSCRIBE_OVERLAY: `¡Mantente al día! Recibe las entradas más recientes en tu correo electrónico`,
     SUBSCRIBE_SECTION: `Recibe las entradas más recientes en tu correo electrónico`,
     SUBSCRIBE_TO: `Suscribirse a`,

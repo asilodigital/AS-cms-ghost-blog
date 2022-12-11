@@ -39,6 +39,7 @@ export default function Index({ cmsData }: IndexProps) {
   if (router.isFallback) return <div>Loading...</div>
 
   const { settings, posts, seoImage, bodyClass } = cmsData
+  console.table(cmsData)
 
   return (
     <>

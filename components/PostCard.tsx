@@ -11,15 +11,18 @@ import { AuthorList } from '@components/AuthorList'
 import { PostClass } from '@helpers/PostClass'
 import { collections } from '@lib/collections'
 import { GhostPostOrPage, GhostSettings } from '@lib/ghost'
+//import star icon from react-icons
+import { BsStarFill } from 'react-icons/bs'
 
 interface PostCardProps {
   settings: GhostSettings
   post: GhostPostOrPage
   num?: number
   isHome?: boolean
+  isBranded?: boolean
 }
 
-export const PostCard = ({ settings, post, num, isHome }: PostCardProps) => {
+export const PostCard = ({ settings, post, num, isHome, isBranded }: PostCardProps) => {
   const { nextImages } = settings.processEnv
   const text = get(getLang(settings.lang))
   const cmsUrl = settings.url
@@ -53,10 +56,15 @@ export const PostCard = ({ settings, post, num, isHome }: PostCardProps) => {
           </a>
         </Link>
       )}
-
+      {/* show branded tag only for small image */}
       <div className="post-card-content">
         <Link href={url}>
           <a className="post-card-content-link">
+            {isBranded && (
+              <div className="post-card-branded">
+                <span className="post-card-branded-text"><BsStarFill style={{ margin: "0 5px" }} />{text(`BRANDED`)}</span>
+              </div>
+            )}
             <header className="post-card-header">
               {post.primary_tag && <div className="post-card-primary-tag">{post.primary_tag.name}</div>}
               <h2 className="post-card-title">{post.title}</h2>

@@ -15,9 +15,7 @@ export const SubscribeForm = ({ settings }: { settings: GhostSettings }) => {
           {text(`EMAIL`)}
           <style jsx>{`
             label {
-              position: absolute;
-              height: 1px;
-              width: 1px;
+              align-self: flex-start;
               clip: rect(1px, 1px, 1px, 1px);
               border: 0;
               overflow: hidden;
