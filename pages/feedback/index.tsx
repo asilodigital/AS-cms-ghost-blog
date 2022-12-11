@@ -2,7 +2,6 @@ import { GetStaticProps } from 'next'
 import { useRouter } from 'next/router'
 
 import { Layout } from '@components/Layout'
-import { PostView } from '@components/PostView'
 import { HeaderIndex } from '@components/HeaderIndex'
 import { StickyNavContainer } from '@effects/StickyNavContainer'
 import { SEO } from '@meta/seo'
@@ -12,6 +11,9 @@ import { getAllPosts, getAllSettings, GhostPostOrPage, GhostPostsOrPages, GhostS
 import { seoImage, ISeoImage } from '@meta/seoImage'
 
 import { BodyClass } from '@helpers/BodyClass'
+
+import Feedback from '@components/common/CannyWidget'
+
 /**
  * Main index page (home page)
  *
@@ -38,7 +40,7 @@ export default function Index({ cmsData }: IndexProps) {
   if (router.isFallback) return <div>Loading...</div>
 
   const { settings, posts, seoImage, bodyClass } = cmsData
-  console.table(posts)
+  console.table(cmsData)
 
   return (
     <>
@@ -47,8 +49,8 @@ export default function Index({ cmsData }: IndexProps) {
         throttle={300}
         activeClass="fixed-nav-active"
         render={(sticky) => (
-          <Layout {...{ bodyClass, sticky, settings, isHome: true }} header={<HeaderIndex {...{ settings }} />}> 
-            <PostView {...{ settings, posts, isHome: true }} />
+          <Layout {...{ bodyClass, sticky, settings, isHome: true }} header={<HeaderIndex {...{ settings }} />}>
+            <Feedback />
           </Layout>
         )}
       />
