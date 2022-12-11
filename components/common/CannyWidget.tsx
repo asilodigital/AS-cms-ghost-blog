@@ -1,3 +1,5 @@
+// ignore typescript error for this file
+// @ts-ignore
 import React, { useEffect } from 'react';
 
 const BoardToken = 'ccf846be-754f-9045-5614-c1fdc5ef463e';
