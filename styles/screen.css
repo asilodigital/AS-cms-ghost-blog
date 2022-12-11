@@ -678,6 +678,7 @@ html.casper .post-card-image {
     height: 200px;
     background: var(--lightgrey) no-repeat center center;
     object-fit: cover;
+    border-radius: 18px;
 }
 
 html.casper .post-card-image img{
