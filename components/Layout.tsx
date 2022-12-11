@@ -11,6 +11,8 @@ import { GhostSettings } from '@lib/ghost'
 
 import { StickyNavContainer } from '@effects/StickyNavContainer'
 import { resolve } from 'url'
+import * as gtag from '../lib/gtag'
+
 
 /**
  * Main layout component
@@ -53,6 +55,11 @@ export const Layout = ({ settings, header, children, isHome, sticky, previewPost
         {header}
         {/* The main content area */}
         <main ref={(isHome && sticky && sticky.anchorRef) || null} id="site-main" className={`site-main outer ${errorClass}`}>
+          <noscript>
+            <iframe src={`https://www.googletagmanager.com/ns.html?id=${gtag.GA_TRACKING_ID}`}
+              height="0" width="0" style={{ display: "none", visibility: "hidden" }}>
+            </iframe>
+          </noscript>
           {/* All the main content gets inserted here, index.js, post.js */}
           {children}
         </main>

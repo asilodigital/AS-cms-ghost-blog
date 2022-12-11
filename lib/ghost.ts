@@ -167,6 +167,7 @@ export async function getAllPages(props?: { limit: number }): Promise<GhostPosts
     filter: excludePostOrPageBySlug(),
     ...(props && { ...props }),
   })
+  console.log('pages ', pages)
   return await createNextFeatureImages(pages)
 }
 
