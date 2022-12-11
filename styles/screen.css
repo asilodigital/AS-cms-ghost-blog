@@ -670,7 +670,7 @@ html.casper .post-card-image-link {
     position: relative;
     display: block;
     overflow: hidden;
-    border-radius: 3px;
+    border-radius: 24px;
 }
 
 html.casper .post-card-image {
