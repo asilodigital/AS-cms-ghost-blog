@@ -485,3 +485,9 @@ h6 {
     font-size: 1.4rem;
     font-weight: 500;
 }
+
+/* TailwindCSS Directives */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

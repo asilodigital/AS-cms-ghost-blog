@@ -30,6 +30,9 @@ production stylesheet in assets/built/screen.css
 /* 1. Global - Set up the things
 /* ---------------------------------------------------------- */
 @import "global.css";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 html.casper body {
     background: #fff;
