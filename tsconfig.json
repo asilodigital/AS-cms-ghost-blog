@@ -124,7 +124,7 @@
     "**/*.ts",
     "**/*.tsx",
     "**/*.js"
-  ],
+, "components/common/CannyWidget.jsx"  ],
   "exclude": [
     "node_modules",
     "types",

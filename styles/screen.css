@@ -677,8 +677,12 @@ html.casper .post-card-image {
     width: 100%;
     height: 200px;
     background: var(--lightgrey) no-repeat center center;
-
     object-fit: cover;
+    border-radius: 18px;
+}
+
+html.casper .post-card-image img{
+    border-radius: 18px;
 }
 
 /* styles for isBranded tag class */
@@ -927,6 +931,10 @@ make sure this only happens on large viewports / desktop-ish devices.
         position: absolute;
         width: 100%;
         height: 100%;
+        border-radius: 60px;
+    }
+    html.casper .post-card-large .post-card-image img {
+        border-radius: 24px !important;
     }
 
     html.casper .post-card-large .post-card-content {
