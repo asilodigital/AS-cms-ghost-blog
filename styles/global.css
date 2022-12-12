@@ -1,3 +1,9 @@
+/* Tailwind Directives
+/* ---------------------------------------------------------- */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* Variables
 /* ---------------------------------------------------------- */
 
@@ -486,8 +492,3 @@ h6 {
     font-weight: 500;
 }
 
-/* TailwindCSS Directives */
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
