@@ -1,5 +1,6 @@
 module.exports = {
   plugins: {
+    'tailwindcss': {},
     'postcss-easy-import': {},
     'postcss-color-mod-function': {},
     'postcss-preset-env': {

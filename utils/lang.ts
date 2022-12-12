@@ -216,7 +216,7 @@ export const lang: KeyObjectMap = {
     MESSAGE_SENT: `Tu mensaje ha sido enviado, ¡Gracias!`,
     MESSAGE_TEXT_IS_REQUIRED: `El contenido del mensaje es obligatorio`,
     ONE_SECOND: `Un segundo por favor...`,
-    SENDING_FAILED: `Oops :-( no se pudo enviar. Error`,
+    SENDING_FAILED: `Oops :-( no se pudo enviar. Inténtelo más tarde`,
     PLEASE_SELECT: `Seleccione...`,
     PLEASE_SELECT_SUBJECT: `Por favor, introduzca un asunto`,
     SUBMIT: `Enviar`,
