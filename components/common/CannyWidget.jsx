@@ -19,7 +19,7 @@ const Feedback = () => {
   }, []);
 
   return (
-    <div className="mx-10 max-w-7xl py-12" data-canny />
+    <div className="mx-auto max-w-7xl py-12" data-canny />
   );
 }
 
