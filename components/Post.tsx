@@ -17,6 +17,7 @@ import { CommentoComments } from '@components/CommentoComments'
 import { DisqusComments } from '@components/DisqusComments'
 import { Subscribe } from '@components/Subscribe'
 import { TableOfContents } from '@components/toc/TableOfContents'
+import ShareAsideBar from './ShareAsideBar'
 
 import { StickyNavContainer } from '@effects/StickyNavContainer'
 import { SEO } from '@meta/seo'
@@ -80,7 +81,9 @@ export const Post = ({ cmsData }: PostProps) => {
                   {post.primary_tag && (
                     <section className="post-full-tags">
                       <Link href={resolveUrl({ cmsUrl, slug: post.primary_tag.slug, url: post.primary_tag.url })}>
-                        <a>{post.primary_tag.name}</a>
+                        <a className='w-[84px] text-white text-center border border-solid border-gray-100 rounded-[22px] my-4 px-6 py-2 '>
+                          {post.primary_tag.name}
+                        </a>
                       </Link>
                     </section>
                   )}
@@ -117,6 +120,7 @@ export const Post = ({ cmsData }: PostProps) => {
                       </section>
                     </section>
                   </div>
+                  <ShareAsideBar title={description} url={url} />
                 </header>
 
                 {featImg &&
