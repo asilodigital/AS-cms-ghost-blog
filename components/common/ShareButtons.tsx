@@ -20,10 +20,11 @@ function shareInSocialMedia(post) {
         case 'Clipboard': 
             return (
                 <button 
-                    onClick={() => { copyToTheClipboard(post.url) }} 
-                    className="block my-1 px-1"
+                    onClick={() => { copyToTheClipboard(post.url) }}
+                    className="px-2"
                 >
-                       <ClipboardIcon />
+                       Clipboard
+                       {/* <ClipboardIcon /> */}
                 </button>
             )
             break;
