@@ -18,7 +18,7 @@ import {
 
 
 // Choose Social Media + state = Post prompt to ShareButton()
-function shareInSocialMedia(post) {
+function shareInSocialMedia(post: any) {
 
     switch (post.shareIn) {
         case 'Clipboard': 
@@ -62,11 +62,11 @@ function shareInSocialMedia(post) {
     }
 }
 
-function ShareButton (post) {
+function ShareButton (post: any) {
 
     return (
       <React.Fragment>
-        <div className="inline-flex w-auto h-auto shrink-0 cursor-pointer select-none appearance-none items-center justify-center bg-red-600 rounded-[24px] space-x-1 px-3 py-2 transition focus:outline-none focus:ring-2 focus:ring-gray-300">
+        <div className="inline-flex w-auto h-auto shrink-0 cursor-pointer select-none appearance-none items-center justify-center bg-[#13111D] rounded-[37px] space-x-1 px-3 py-2 transition focus:outline-none focus:ring-2 focus:ring-gray-300">
             {shareInSocialMedia(post)}
         </div>
       </React.Fragment>
