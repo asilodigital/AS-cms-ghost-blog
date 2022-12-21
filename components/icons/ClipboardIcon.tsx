@@ -7,6 +7,7 @@ const Clipboard_Icon = () => (
          width="32px"
          height="16px"
          placeholder="empty" 
+         className="object-fill"
     ></Image>
 )
 

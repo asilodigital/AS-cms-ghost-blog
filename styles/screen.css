@@ -1046,11 +1046,23 @@ html.casper .post-full-meta-date {
     html.casper .post-full-header {
         padding: 20px 0 35px;
     }
+
+    html.casper .post-full-tags {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        color: var(--midgrey);
+        font-size: 1.3rem;
+        line-height: 1.4em;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
 }
 
 html.casper .post-full-title {
     margin: 0 0 0.2em;
     color: color-mod(var(--darkgrey) l(-5%));
+    text-align: center;
 }
 
 html.casper .post-full-custom-excerpt {
@@ -1060,6 +1072,7 @@ html.casper .post-full-custom-excerpt {
     font-size: 2.3rem;
     line-height: 1.4em;
     font-weight: 300;
+    text-align: center;
 }
 
 html.casper .date-divider {
@@ -1112,6 +1125,7 @@ html.casper .post-full-content {
     html.casper .post-full-custom-excerpt {
         font-size: 1.9rem;
         line-height: 1.5em;
+        text-align: start;
     }
 }
 
@@ -1511,6 +1525,7 @@ html.casper .footnote-backref {
         margin-top: 0.2em;
         font-size: 4.2rem;
         line-height: 1.05em;
+        text-align: start;
     }
 
     html.casper .post-full-image {
@@ -1610,7 +1625,7 @@ html.casper .post-full-byline-meta {
     line-height: 1.2em;
     letter-spacing: 0.2px;
     text-transform: uppercase;
-    ;
+    
 }
 
 html.casper .post-full-byline-meta h4 {
