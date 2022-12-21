@@ -2,14 +2,18 @@ import React from 'react';
 
 import copyToTheClipboard from '@utils/clipboard';
 
-import ClipboardIcon from '@components/icons/ClipboardIcon';
+import Clipboard_Icon from '@components/icons/ClipboardIcon';
+import Twitter_Icon from '@components/icons/TwitterIcon';
+import Telegram_Icon from '@components/icons/TelegramIcon';
+import Linkedin_Icon from '@components/icons/LinkedinIcon'
 
 
 
 import {
     TelegramShareButton,
     TwitterShareButton,
-    LinkedinShareButton
+    LinkedinShareButton,
+    LinkedinIcon
 } from 'next-share';
 
 
@@ -21,10 +25,10 @@ function shareInSocialMedia(post) {
             return (
                 <button 
                     onClick={() => { copyToTheClipboard(post.url) }}
-                    className="px-2"
+                    className=""
                 >
-                       Clipboard
-                       {/* <ClipboardIcon /> */}
+
+                       <Clipboard_Icon />
                 </button>
             )
             break;
@@ -32,7 +36,7 @@ function shareInSocialMedia(post) {
         case 'Twitter':
             return (
                 <TwitterShareButton title={post.description} url={post.url} via="asilodigital">
-                    <p className="px-2"> Twitter </p>
+                    <Twitter_Icon />
                 </TwitterShareButton>
             )
             break;
@@ -40,7 +44,7 @@ function shareInSocialMedia(post) {
         case 'Telegram': 
             return (
                 <TelegramShareButton title={post.description} url={post.url}>
-                    <p className="px-2">Telegram</p>    
+                    <Telegram_Icon /> 
                 </ TelegramShareButton>
             )
             break;
@@ -49,7 +53,7 @@ function shareInSocialMedia(post) {
 
             return (
                 <LinkedinShareButton title={post.description} url={post.url}>
-                   <p className="px-2"> Linkedin </p>
+                    <Linkedin_Icon />
                 </LinkedinShareButton>
             )
        
@@ -62,13 +66,9 @@ function ShareButton (post) {
 
     return (
       <React.Fragment>
-
-        { 
-         
-            (shareInSocialMedia(post))
-
-        }
-
+        <div className="inline-flex w-auto h-auto shrink-0 cursor-pointer select-none appearance-none items-center justify-center bg-red-600 rounded-[24px] space-x-1 px-3 py-2 transition focus:outline-none focus:ring-2 focus:ring-gray-300">
+            {shareInSocialMedia(post)}
+        </div>
       </React.Fragment>
     )
 }

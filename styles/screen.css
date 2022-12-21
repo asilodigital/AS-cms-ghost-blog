@@ -1014,7 +1014,7 @@ html.casper .post-full-header {
 
 html.casper .post-full-tags {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     color: var(--midgrey);
     font-size: 1.3rem;

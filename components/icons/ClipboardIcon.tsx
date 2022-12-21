@@ -1,7 +1,7 @@
 import ClipBoardSVG from '../../public/clipboard.svg'
 import Image from 'next/image'
 
-const ClipboardIcon = () => (
+const Clipboard_Icon = () => (
     <Image src={ClipBoardSVG} 
          alt="Ilustración de una cadena"
          width="32px"
@@ -10,4 +10,4 @@ const ClipboardIcon = () => (
     ></Image>
 )
 
-export default ClipboardIcon;
+export default Clipboard_Icon;
