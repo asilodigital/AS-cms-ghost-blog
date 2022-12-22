@@ -44,7 +44,7 @@ interface PostProps {
 
 export const Post = ({ cmsData }: PostProps) => {
   const { post, settings, seoImage, previewPosts, prevPost, nextPost, bodyClass } = cmsData
-  const { slug, url, meta_description, excerpt, title } = post
+  const { slug, url, meta_description, excerpt, title} = post
   const { url: cmsUrl } = settings
   const description = meta_description || excerpt
 
@@ -53,7 +53,6 @@ export const Post = ({ cmsData }: PostProps) => {
 
   const lang = settings.lang
   const text = get(getLang(lang))
-  const readingTime = readingTimeHelper(post).replace(`min read`, text(`MIN_READ`))
   const featImg = post.featureImage
   const postClass = PostClass({ tags: post.tags, isFeatured: !!featImg, isImage: !!featImg })
 
@@ -81,7 +80,7 @@ export const Post = ({ cmsData }: PostProps) => {
                   {post.primary_tag && (
                     <section className="post-full-tags">
                       <Link href={resolveUrl({ cmsUrl, slug: post.primary_tag.slug, url: post.primary_tag.url })}>
-                        <a className='w-[84px] text-white text-center border border-solid border-gray-100 rounded-[22px] my-4 px-6 py-2 '>
+                        <a className='w-[84px] min-w-min text-white text-center border border-solid border-gray-100 rounded-[22px] my-4 px-6 py-2'>
                           {post.primary_tag.name}
                         </a>
                       </Link>
@@ -124,7 +123,14 @@ export const Post = ({ cmsData }: PostProps) => {
                     )
                   ))}
 
-                  <div className="post-full-byline">
+                  <p className="w-full flex justify-center" 
+                    dangerouslySetInnerHTML={{
+                      __html:post.feature_image_caption
+                    }}>
+                      
+                  </p>
+
+                  <div className="post-full-byline pb-12">
                     <section className="post-full-byline-content">
                       <AuthorList {...{ settings, authors: post.authors, isPost: true }} />
 

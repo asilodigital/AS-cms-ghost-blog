@@ -66,7 +66,7 @@ function ShareButton (post: any) {
 
     return (
       <React.Fragment>
-        <div className="inline-flex w-[50px] h-[50px] cursor-pointer select-none appearance-none items-center justify-center bg-[#13111D] rounded-full space-x-1 px-3 py-2 transition focus:outline-none focus:ring-2 focus:ring-gray-300">
+        <div className="inline-flex w-[50px] h-[50px] cursor-pointer select-none appearance-none items-center justify-center bg-[#13111D] rounded-full space-x-1 transition focus:outline-none focus:ring-2 focus:ring-gray-300">
             {shareInSocialMedia(post)}
         </div>
       </React.Fragment>

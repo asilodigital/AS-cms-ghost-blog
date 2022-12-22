@@ -1086,7 +1086,7 @@ html.casper .post-full-image {
     flex-direction: column;
     align-items: center;
     overflow: hidden;
-    margin: 25px 0 50px;
+    margin: 25px 22px;
     background: color-mod(var(--lightgrey) l(+10%));
     border-radius: 3px;
 }
@@ -1500,7 +1500,7 @@ html.casper .footnote-backref {
 /* Some grouped styles for smaller viewports */
 @media (max-width: 1170px) {
     html.casper .post-full-image {
-        margin: 25px -6vw 50px;
+        margin: 25px;
         border-radius: 0;
     }
 
@@ -1511,7 +1511,7 @@ html.casper .footnote-backref {
 
 @media (max-width: 700px) {
     html.casper .post-full-image {
-        margin: 25px -5vw;
+        margin: 25px;
     }
 }
 
@@ -1530,7 +1530,6 @@ html.casper .footnote-backref {
 
     html.casper .post-full-image {
         margin-top: 5px;
-        margin-bottom: 5vw;
     }
 
     html.casper .post-full-content {
@@ -1602,8 +1601,9 @@ html.casper .post-full-content table td {
 html.casper .post-full-byline {
     display: flex;
     justify-content: space-between;
-    margin: 35px 0 0;
-    padding-top: 15px;
+    flex-direction: column;
+    margin: 25px 0 0;
+    padding-top: 5px;
     border-top: 1px solid color-mod(var(--lightgrey) l(+10%));
 }
 
