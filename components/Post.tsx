@@ -125,7 +125,7 @@ export const Post = ({ cmsData }: PostProps) => {
 
                   <p className="w-full flex justify-center" 
                     dangerouslySetInnerHTML={{
-                      __html:post.feature_image_caption
+                      __html:post.feature_image_caption ?? ''
                     }}>
                       
                   </p>
