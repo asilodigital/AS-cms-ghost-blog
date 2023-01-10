@@ -1,4 +1,4 @@
-import { TwitterIcon } from '@icons/TwitterIcon'
+import Twitter_Icon from '@components/icons/TwitterIcon';
 import { FacebookIcon } from '@icons/FacebookIcon'
 
 import { SocialRss } from '@components/SocialRss'
@@ -25,7 +25,7 @@ export const SocialLinks = ({ siteUrl, site }: SocialLinkProps) => {
       )}
       {site.twitter && (
         <a href={twitterUrl} className="social-link social-link-tw" target="_blank" rel="noopener noreferrer" title="Twitter">
-          <TwitterIcon />
+          <Twitter_Icon />
         </a>
       )}
       {!memberSubscriptions && <SocialRss {...{ siteUrl }} />}

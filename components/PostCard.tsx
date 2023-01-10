@@ -66,7 +66,11 @@ export const PostCard = ({ settings, post, num, isHome, isBranded }: PostCardPro
               </div>
             )}
             <header className="post-card-header">
-              {post.primary_tag && <div className="post-card-primary-tag">{post.primary_tag.name}</div>}
+              {post.primary_tag &&
+                <div className="w-[75px] min-h-min min-w-min text-white text-center text-lg font-semibold border border-solid border-gray-100 rounded-[22px] my-4 px-6 py-2">
+                  {post.primary_tag.name}
+                </div>
+              }
               <h2 className="post-card-title">{post.title}</h2>
             </header>
             <section className="post-card-excerpt">

@@ -17,6 +17,7 @@ import { CommentoComments } from '@components/CommentoComments'
 import { DisqusComments } from '@components/DisqusComments'
 import { Subscribe } from '@components/Subscribe'
 import { TableOfContents } from '@components/toc/TableOfContents'
+import ShareAsideBar from './ShareAsideBar'
 
 import { StickyNavContainer } from '@effects/StickyNavContainer'
 import { SEO } from '@meta/seo'
@@ -43,7 +44,7 @@ interface PostProps {
 
 export const Post = ({ cmsData }: PostProps) => {
   const { post, settings, seoImage, previewPosts, prevPost, nextPost, bodyClass } = cmsData
-  const { slug, url, meta_description, excerpt, title } = post
+  const { slug, url, meta_description, excerpt, title} = post
   const { url: cmsUrl } = settings
   const description = meta_description || excerpt
 
@@ -52,7 +53,6 @@ export const Post = ({ cmsData }: PostProps) => {
 
   const lang = settings.lang
   const text = get(getLang(lang))
-  const readingTime = readingTimeHelper(post).replace(`min read`, text(`MIN_READ`))
   const featImg = post.featureImage
   const postClass = PostClass({ tags: post.tags, isFeatured: !!featImg, isImage: !!featImg })
 
@@ -80,7 +80,9 @@ export const Post = ({ cmsData }: PostProps) => {
                   {post.primary_tag && (
                     <section className="post-full-tags">
                       <Link href={resolveUrl({ cmsUrl, slug: post.primary_tag.slug, url: post.primary_tag.url })}>
-                        <a>{post.primary_tag.name}</a>
+                        <a className='w-[84px] min-w-min text-white text-center border border-solid border-gray-100 rounded-[22px] my-4 px-6 py-2'>
+                          {post.primary_tag.name}
+                        </a>
                       </Link>
                     </section>
                   )}
@@ -91,32 +93,8 @@ export const Post = ({ cmsData }: PostProps) => {
 
                   {post.custom_excerpt && <p className="post-full-custom-excerpt">{post.custom_excerpt}</p>}
 
-                  <div className="post-full-byline">
-                    <section className="post-full-byline-content">
-                      <AuthorList {...{ settings, authors: post.authors, isPost: true }} />
-
-                      <section className="post-full-byline-meta">
-                        <h4 className="author-name">
-                          {post.authors?.map((author, i) => (
-                            <div key={i}>
-                              {i > 0 ? `, ` : ``}
-                              <Link href={resolveUrl({ cmsUrl, slug: author.slug, url: author.url || undefined })}>
-                                <a>{author.name}</a>
-                              </Link>
-                            </div>
-                          ))}
-                        </h4>
-                        <div className="byline-meta-content">
-                          <time className="byline-meta-date" dateTime={post.published_at || ''}>
-                            {dayjs(post.published_at || '').format('D MMMM, YYYY')}&nbsp;
-                          </time>
-                          <span className="byline-reading-time">
-                            <span className="bull">&bull;</span> {readingTime}
-                          </span>
-                        </div>
-                      </section>
-                    </section>
-                  </div>
+                 
+                  <ShareAsideBar title={description} url={url} />
                 </header>
 
                 {featImg &&
@@ -145,6 +123,37 @@ export const Post = ({ cmsData }: PostProps) => {
                     )
                   ))}
 
+                  <p className="w-full flex justify-center" 
+                    dangerouslySetInnerHTML={{
+                      __html:post.feature_image_caption ?? ''
+                    }}>
+                      
+                  </p>
+
+                  <div className="post-full-byline pb-12">
+                    <section className="post-full-byline-content">
+                      <AuthorList {...{ settings, authors: post.authors, isPost: true }} />
+
+                      <section className="post-full-byline-meta">
+                        <h4 className="author-name">
+                          {post.authors?.map((author, i) => (
+                            <div key={i}>
+                              {i > 0 ? `, ` : ``}
+                              <Link href={resolveUrl({ cmsUrl, slug: author.slug, url: author.url || undefined })}>
+                                <a>{author.name}</a>
+                              </Link>
+                            </div>
+                          ))}
+                        </h4>
+                        <div className="byline-meta-content">
+                          <time className="byline-meta-date" dateTime={post.published_at || ''}>
+                            {dayjs(post.published_at || '').format('D MMMM, YYYY')}&nbsp;
+                          </time>
+                        </div>
+                      </section>
+                    </section>
+                  </div>
+                    
                 <section className="post-full-content">
                   {toc.enable && !!post.toc && <TableOfContents {...{ toc: post.toc, url: resolveUrl({ cmsUrl, collectionPath, slug, url }), maxDepth: toc.maxDepth, lang }} />}
                   <div className="post-content load-external-scripts">

@@ -1014,7 +1014,7 @@ html.casper .post-full-header {
 
 html.casper .post-full-tags {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     color: var(--midgrey);
     font-size: 1.3rem;
@@ -1046,11 +1046,23 @@ html.casper .post-full-meta-date {
     html.casper .post-full-header {
         padding: 20px 0 35px;
     }
+
+    html.casper .post-full-tags {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        color: var(--midgrey);
+        font-size: 1.3rem;
+        line-height: 1.4em;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
 }
 
 html.casper .post-full-title {
     margin: 0 0 0.2em;
     color: color-mod(var(--darkgrey) l(-5%));
+    text-align: center;
 }
 
 html.casper .post-full-custom-excerpt {
@@ -1060,6 +1072,7 @@ html.casper .post-full-custom-excerpt {
     font-size: 2.3rem;
     line-height: 1.4em;
     font-weight: 300;
+    text-align: center;
 }
 
 html.casper .date-divider {
@@ -1073,7 +1086,7 @@ html.casper .post-full-image {
     flex-direction: column;
     align-items: center;
     overflow: hidden;
-    margin: 25px 0 50px;
+    margin: 25px 22px;
     background: color-mod(var(--lightgrey) l(+10%));
     border-radius: 3px;
 }
@@ -1112,6 +1125,7 @@ html.casper .post-full-content {
     html.casper .post-full-custom-excerpt {
         font-size: 1.9rem;
         line-height: 1.5em;
+        text-align: start;
     }
 }
 
@@ -1486,7 +1500,7 @@ html.casper .footnote-backref {
 /* Some grouped styles for smaller viewports */
 @media (max-width: 1170px) {
     html.casper .post-full-image {
-        margin: 25px -6vw 50px;
+        margin: 25px;
         border-radius: 0;
     }
 
@@ -1497,7 +1511,7 @@ html.casper .footnote-backref {
 
 @media (max-width: 700px) {
     html.casper .post-full-image {
-        margin: 25px -5vw;
+        margin: 25px;
     }
 }
 
@@ -1511,11 +1525,11 @@ html.casper .footnote-backref {
         margin-top: 0.2em;
         font-size: 4.2rem;
         line-height: 1.05em;
+        text-align: start;
     }
 
     html.casper .post-full-image {
         margin-top: 5px;
-        margin-bottom: 5vw;
     }
 
     html.casper .post-full-content {
@@ -1587,8 +1601,9 @@ html.casper .post-full-content table td {
 html.casper .post-full-byline {
     display: flex;
     justify-content: space-between;
-    margin: 35px 0 0;
-    padding-top: 15px;
+    flex-direction: column;
+    margin: 25px 0 0;
+    padding-top: 5px;
     border-top: 1px solid color-mod(var(--lightgrey) l(+10%));
 }
 
@@ -1610,7 +1625,7 @@ html.casper .post-full-byline-meta {
     line-height: 1.2em;
     letter-spacing: 0.2px;
     text-transform: uppercase;
-    ;
+    
 }
 
 html.casper .post-full-byline-meta h4 {
