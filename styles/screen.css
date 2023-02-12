@@ -1594,6 +1594,26 @@ html.casper .post-full-content table td {
     border: color-mod(var(--whitegrey) l(-1%) s(-5%)) 1px solid;
 }
 
+/* Callout */
+
+html.casper .post-content .kg-callout-card  {
+    display: flex;
+    padding: 1.2em 1.6em;
+    border-radius: 3px;
+    margin: 1em;
+}
+
+html.casper .post-content .kg-callout-card-grey {
+    background: rgba(124,139,154,.13);
+}
+
+html.casper .post-content .kg-callout-card .kg-callout-emoji {
+    padding-right: .8em;
+    line-height: 1.25em;
+    font-size: 1.15em;
+}
+
+
 
 /* 7.1. Post Byline
 /* ---------------------------------------------------------- */
