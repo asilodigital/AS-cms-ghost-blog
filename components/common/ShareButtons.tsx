@@ -21,9 +21,9 @@ import {
 function shareInSocialMedia(post: any) {
 
     switch (post.shareIn) {
-        case 'Clipboard': 
+        case 'Clipboard':
             return (
-                <button 
+                <button
                     onClick={() => { copyToTheClipboard(post.url) }}
                     className=""
                 >
@@ -32,7 +32,7 @@ function shareInSocialMedia(post: any) {
                 </button>
             )
             break;
-      
+
         case 'Twitter':
             return (
                 <TwitterShareButton title={post.description} url={post.url} via="asilodigital">
@@ -40,23 +40,23 @@ function shareInSocialMedia(post: any) {
                 </TwitterShareButton>
             )
             break;
-        
-        case 'Telegram': 
+
+        case 'Telegram':
             return (
                 <TelegramShareButton title={post.description} url={post.url}>
-                    <Telegram_Icon /> 
+                    <Telegram_Icon />
                 </ TelegramShareButton>
             )
             break;
-        
-        case 'Linkedin': 
+
+        case 'Linkedin':
 
             return (
                 <LinkedinShareButton title={post.description} url={post.url}>
                     <Linkedin_Icon />
                 </LinkedinShareButton>
             )
-       
+
         default:
             break;
     }
@@ -66,7 +66,7 @@ function ShareButton (post: any) {
 
     return (
       <React.Fragment>
-        <div className="inline-flex w-[50px] h-[50px] cursor-pointer select-none appearance-none items-center justify-center bg-[#13111D] rounded-full space-x-1 transition focus:outline-none focus:ring-2 focus:ring-gray-300">
+        <div className="inline-flex w-[50px] h-[50px] cursor-pointer select-none appearance-none items-center justify-center bg-[#1C1A29] rounded-full space-x-1 transition focus:outline-none focus:ring-2 focus:ring-gray-300">
             {shareInSocialMedia(post)}
         </div>
       </React.Fragment>
