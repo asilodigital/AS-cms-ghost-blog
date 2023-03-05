@@ -7,13 +7,10 @@ import Twitter_Icon from '@components/icons/TwitterIcon';
 import Telegram_Icon from '@components/icons/TelegramIcon';
 import Linkedin_Icon from '@components/icons/LinkedinIcon'
 
-
-
 import {
     TelegramShareButton,
     TwitterShareButton,
     LinkedinShareButton,
-    LinkedinIcon
 } from 'next-share';
 
 
@@ -66,7 +63,7 @@ function ShareButton (post: any) {
 
     return (
       <React.Fragment>
-        <div className="inline-flex w-[50px] h-[50px] cursor-pointer select-none appearance-none items-center justify-center bg-[#1C1A29] rounded-full space-x-1 transition focus:outline-none focus:ring-2 focus:ring-gray-300">
+        <div className="inline-flex w-[50px] h-[50px] cursor-pointer select-none appearance-none items-center justify-center bg-ShareButtons bg-[#1C1A29] rounded-full space-x-1 pt-1 transition focus:outline-none focus:ring-2 focus:ring-gray-300">
             {shareInSocialMedia(post)}
         </div>
       </React.Fragment>
