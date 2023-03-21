@@ -1,18 +1,14 @@
 import ClipBoardLightMode from '../../public/clipboard.svg'
 import ClipBoardDarkMode from '../../public/ClipboardDarkMode.svg'
-import Image from 'next/image'
 import { useTheme } from '@components/contexts/themeProvider'
+import Image from 'next/image'
 
 function Clipboard_Icon() {
 
-  // const {dark, toggleDark} = useTheme()
-
-  // let changeIcon = dark === null ? <svg viewBox="0 0 512 512"></svg> : dark === "dark" ? ClipBoardLightMode : ClipBoardDarkMode
-
-  // console.log(changeIcon.src)
+  const {dark} = useTheme()
 
   return (
-    <Image src={ClipBoardLightMode}
+    <Image src={dark == 'dark' ? ClipBoardLightMode : ClipBoardDarkMode}
          alt="Ilustración de una cadena"
          width="32px"
          height="16px"
