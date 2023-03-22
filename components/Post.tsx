@@ -161,6 +161,11 @@ export const Post = ({ cmsData }: PostProps) => {
                   </div>
                 </section>
 
+                <section className="flex items-start lg:items-center justify-start lg:justify-center flex-col">
+                  <p className="not-italic font-bold mb-0">Compártelo para llegue más lejos 🚀</p>
+                  <ShareAsideBar className="pt-[14px] items-start lg:justify-center lg:items-center sm:justify-center" title={description} url={url} />
+                </section>
+
                 {memberSubscriptions && <Subscribe {...{ settings }} />}
 
                 {commenting.system === 'commento' && <CommentoComments {...{ id: post.id, url: commenting.commentoUrl }} />}

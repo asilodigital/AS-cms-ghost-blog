@@ -1012,7 +1012,7 @@ html.casper .post-full-header {
     border-top-right-radius: 3px;
 }
 
-html.casper .post-full-header .bg-ShareButtons {
+html.casper .bg-ShareButtons {
   background-color: var(--lightShareButtons);
 }
 
