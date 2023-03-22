@@ -1,5 +1,6 @@
 /* Font imports */
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
 /* Font imports */
 
 /* Tailwind Directives
@@ -141,7 +142,7 @@ img {
 }
 html {
     box-sizing: border-box;
-    font-family: "Manrope", sans-serif;
+    font-family: 'Sora', sans-serif;
 
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -200,7 +201,7 @@ code,
 kbd,
 pre,
 samp {
-    font-family: "Manrope", sans-serif;
+    font-family: 'Sora', sans-serif;
     font-size: 1em;
 }
 button,
@@ -292,7 +293,7 @@ html {
 body {
     overflow-x: hidden;
     color: color-mod(var(--midgrey) l(-30%));
-    font-family: "Manrope", sans-serif;
+    font-family: 'Sora', sans-serif;
     font-size: 1.6rem;
     line-height: 1.6em;
     font-weight: 400;
