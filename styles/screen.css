@@ -759,7 +759,7 @@ html.casper .post-card-content {
 html.casper .post-card-excerpt {
     max-width: 56em;
     color: color-mod(var(--midgrey) l(-8%));
-    font-family: Georgia, serif;
+    font-family: "Manrope", sans-serif;
 }
 
 html.casper .post-card-excerpt p {
@@ -1068,7 +1068,7 @@ html.casper .post-full-title {
 html.casper .post-full-custom-excerpt {
     margin: 20px 0 0;
     color: var(--midgrey);
-    font-family: Georgia, serif;
+    font-family: "Manrope", sans-serif;
     font-size: 2.3rem;
     line-height: 1.4em;
     font-weight: 300;
@@ -1102,7 +1102,7 @@ html.casper .post-full-content {
     margin: 0 auto;
     padding: 0 170px 6vw;
     min-height: 230px;
-    font-family: Georgia, serif;
+    font-family: "Manrope", sans-serif;
     font-size: 2.0rem;
     line-height: 1.6em;
     background: #fff;
@@ -1441,7 +1441,7 @@ html.casper .post-full-content h5 {
     padding: 0.4em 1em 0.9em;
     border: 0;
     color: var(--blue);
-    font-family: Georgia, serif;
+    font-family: "Manrope", sans-serif;
     font-size: 3.2rem;
     line-height: 1.35em;
     text-align: center;
@@ -2877,7 +2877,7 @@ html.casper .subscribe-overlay-description {
     margin: 50px auto 50px;
     max-width: 650px;
     color: #fff;
-    font-family: Georgia, serif;
+    font-family: "Manrope", sans-serif;
     font-size: 1.8rem;
     line-height: 1.3em;
     font-weight: 300;
