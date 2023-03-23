@@ -7,12 +7,15 @@ import Twitter_Icon from '@components/icons/TwitterIcon';
 import Telegram_Icon from '@components/icons/TelegramIcon';
 import Linkedin_Icon from '@components/icons/LinkedinIcon'
 
+import { toast } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
+
 import {
     TelegramShareButton,
     TwitterShareButton,
     LinkedinShareButton,
 } from 'next-share';
-
 
 // Choose Social Media + state = Post prompt to ShareButton()
 function shareInSocialMedia(post: any) {
@@ -21,9 +24,9 @@ function shareInSocialMedia(post: any) {
         case 'Clipboard':
             return (
                 <button
-                    onClick={() => { copyToTheClipboard(post.url) }}
-                    className=""
-                >
+                    onClick={() => {
+                      copyToTheClipboard(post.url)
+                    }}>
 
                        <Clipboard_Icon />
                 </button>
