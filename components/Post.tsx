@@ -80,7 +80,7 @@ export const Post = ({ cmsData }: PostProps) => {
                   {post.primary_tag && (
                     <section className="post-full-tags">
                       <Link href={resolveUrl({ cmsUrl, slug: post.primary_tag.slug, url: post.primary_tag.url })}>
-                        <a className='w-[84px] min-w-min text-white text-center border border-solid border-gray-100 rounded-[22px] my-4 px-6 py-2'>
+                        <a className='w-[84px] min-w-min text-black dark:text-white text-center border border-solid border-gray-400 rounded-[22px] my-4 px-6 pb-2 pt-1'>
                           {post.primary_tag.name}
                         </a>
                       </Link>
@@ -93,7 +93,7 @@ export const Post = ({ cmsData }: PostProps) => {
 
                   {post.custom_excerpt && <p className="post-full-custom-excerpt">{post.custom_excerpt}</p>}
 
-                 
+
                   <ShareAsideBar title={description} url={url} />
                 </header>
 
@@ -123,11 +123,11 @@ export const Post = ({ cmsData }: PostProps) => {
                     )
                   ))}
 
-                  <p className="w-full flex justify-center" 
+                  <p className="w-full flex justify-center"
                     dangerouslySetInnerHTML={{
                       __html:post.feature_image_caption ?? ''
                     }}>
-                      
+
                   </p>
 
                   <div className="post-full-byline pb-12">
@@ -153,12 +153,17 @@ export const Post = ({ cmsData }: PostProps) => {
                       </section>
                     </section>
                   </div>
-                    
+
                 <section className="post-full-content">
                   {toc.enable && !!post.toc && <TableOfContents {...{ toc: post.toc, url: resolveUrl({ cmsUrl, collectionPath, slug, url }), maxDepth: toc.maxDepth, lang }} />}
                   <div className="post-content load-external-scripts">
                     <RenderContent htmlAst={htmlAst} />
                   </div>
+                </section>
+
+                <section className="flex items-start lg:items-center justify-start lg:justify-center flex-col">
+                  <p className="not-italic font-bold mb-0">Compártelo para llegue más lejos 🚀</p>
+                  <ShareAsideBar className="pt-[14px] items-start lg:justify-center lg:items-center sm:justify-center" title={description} url={url} />
                 </section>
 
                 {memberSubscriptions && <Subscribe {...{ settings }} />}

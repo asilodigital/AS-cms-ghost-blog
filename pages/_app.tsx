@@ -2,11 +2,13 @@ import { useEffect } from 'react'
 import Script from 'next/script'
 import { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
+import { ToastContainer } from 'react-toastify'
 import { OverlayProvider } from '@components/contexts/overlayProvider'
 import { ThemeProvider } from '@components/contexts/themeProvider'
 import { processEnv } from '@lib/processEnv'
 import * as gtag from '../lib/gtag'
 
+import 'react-toastify/dist/ReactToastify.css';
 import '@styles/screen.css'
 import '@styles/screen-fixings.css'
 import '@styles/dark-mode.css'
@@ -57,6 +59,7 @@ function App({ Component, pageProps }: AppProps) {
         />
         <Component {...pageProps} />
       </OverlayProvider>
+      <ToastContainer />
     </ThemeProvider>
   )
 }

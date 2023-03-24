@@ -7,32 +7,32 @@ import Twitter_Icon from '@components/icons/TwitterIcon';
 import Telegram_Icon from '@components/icons/TelegramIcon';
 import Linkedin_Icon from '@components/icons/LinkedinIcon'
 
+import { toast } from 'react-toastify';
 
+import 'react-toastify/dist/ReactToastify.css';
 
 import {
     TelegramShareButton,
     TwitterShareButton,
     LinkedinShareButton,
-    LinkedinIcon
 } from 'next-share';
-
 
 // Choose Social Media + state = Post prompt to ShareButton()
 function shareInSocialMedia(post: any) {
 
     switch (post.shareIn) {
-        case 'Clipboard': 
+        case 'Clipboard':
             return (
-                <button 
-                    onClick={() => { copyToTheClipboard(post.url) }}
-                    className=""
-                >
+                <button
+                    onClick={() => {
+                      copyToTheClipboard(post.url)
+                    }}>
 
                        <Clipboard_Icon />
                 </button>
             )
             break;
-      
+
         case 'Twitter':
             return (
                 <TwitterShareButton title={post.description} url={post.url} via="asilodigital">
@@ -40,23 +40,23 @@ function shareInSocialMedia(post: any) {
                 </TwitterShareButton>
             )
             break;
-        
-        case 'Telegram': 
+
+        case 'Telegram':
             return (
                 <TelegramShareButton title={post.description} url={post.url}>
-                    <Telegram_Icon /> 
+                    <Telegram_Icon />
                 </ TelegramShareButton>
             )
             break;
-        
-        case 'Linkedin': 
+
+        case 'Linkedin':
 
             return (
                 <LinkedinShareButton title={post.description} url={post.url}>
                     <Linkedin_Icon />
                 </LinkedinShareButton>
             )
-       
+
         default:
             break;
     }
@@ -66,7 +66,7 @@ function ShareButton (post: any) {
 
     return (
       <React.Fragment>
-        <div className="inline-flex w-[50px] h-[50px] cursor-pointer select-none appearance-none items-center justify-center bg-[#13111D] rounded-full space-x-1 transition focus:outline-none focus:ring-2 focus:ring-gray-300">
+        <div className="inline-flex w-[50px] h-[50px] cursor-pointer select-none appearance-none items-center justify-center bg-ShareButtons bg-[#1C1A29] rounded-full space-x-1 pt-1 transition focus:outline-none focus:ring-2 focus:ring-gray-300">
             {shareInSocialMedia(post)}
         </div>
       </React.Fragment>

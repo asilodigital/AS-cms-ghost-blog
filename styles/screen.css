@@ -1012,6 +1012,10 @@ html.casper .post-full-header {
     border-top-right-radius: 3px;
 }
 
+html.casper .bg-ShareButtons {
+  background-color: var(--lightShareButtons);
+}
+
 html.casper .post-full-tags {
     display: flex;
     justify-content: center;
@@ -1645,7 +1649,7 @@ html.casper .post-full-byline-meta {
     line-height: 1.2em;
     letter-spacing: 0.2px;
     text-transform: uppercase;
-    
+
 }
 
 html.casper .post-full-byline-meta h4 {
