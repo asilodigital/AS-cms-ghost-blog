@@ -19,7 +19,7 @@ const Feedback = () => {
   }, []);
 
   return (
-    <div data-canny />
+    <div className="mx-auto w-full md:w-auto py-12" data-canny />
   );
 }
 

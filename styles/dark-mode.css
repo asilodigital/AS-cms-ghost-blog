@@ -64,6 +64,10 @@ html.casper body.dark .post-full-content {
   background: var(--darkmode);
 }
 
+html.casper body.dark .bg-ShareButtons {
+  background-color: var(--darkShareButtons);
+}
+
 html.casper body.dark .post-full-title {
   color: rgba(255, 255, 255, 0.9);
 }
