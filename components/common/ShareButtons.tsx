@@ -23,7 +23,7 @@ function shareInSocialMedia(post: any) {
     switch (post.shareIn) {
         case 'Clipboard':
             return (
-                <button
+                <button className='flex items-center justify-center'
                     onClick={() => {
                       copyToTheClipboard(post.url)
                     }}>
@@ -35,7 +35,7 @@ function shareInSocialMedia(post: any) {
 
         case 'Twitter':
             return (
-                <TwitterShareButton title={post.description} url={post.url} via="asilodigital">
+                <TwitterShareButton style={{ display: "flex", justifyContent: "center", alignItems: "center" }} title={post.description} url={post.url} via="asilodigital">
                     <Twitter_Icon />
                 </TwitterShareButton>
             )
@@ -43,7 +43,7 @@ function shareInSocialMedia(post: any) {
 
         case 'Telegram':
             return (
-                <TelegramShareButton title={post.description} url={post.url}>
+                <TelegramShareButton style={{ display: "flex", justifyContent: "center", alignItems: "center" }} title={post.description} url={post.url}>
                     <Telegram_Icon />
                 </ TelegramShareButton>
             )
@@ -52,7 +52,7 @@ function shareInSocialMedia(post: any) {
         case 'Linkedin':
 
             return (
-                <LinkedinShareButton title={post.description} url={post.url}>
+                <LinkedinShareButton style={{ display: "flex", justifyContent: "center", alignItems: "center" }} title={post.description} url={post.url}>
                     <Linkedin_Icon />
                 </LinkedinShareButton>
             )
