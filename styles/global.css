@@ -1,6 +1,4 @@
 /* Font imports */
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap');
 /* Font imports */
 
 /* Tailwind Directives
@@ -9,6 +7,27 @@
 @tailwind components;
 @tailwind utilities;
 
+
+/* Font faces */
+
+@font-face {
+    font-family: 'Manrope';
+    src: url('/fonts/Manrope-VariableFont_wght.ttf');
+    font-style: medium;
+    font-weight: normal;
+    font-display: swap;
+  }
+  
+@font-face {
+    font-family: 'Sora';
+    src: url('/fonts/Sora-VariableFont_wght.ttf');
+    font-style: medium;
+    font-weight: normal;
+    font-display: swap;
+  }
+
+  
+/* Font faces */
 /* Variables
 /* ---------------------------------------------------------- */
 
