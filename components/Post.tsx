@@ -94,7 +94,7 @@ export const Post = ({ cmsData }: PostProps) => {
                   {post.custom_excerpt && <p className="post-full-custom-excerpt">{post.custom_excerpt}</p>}
 
 
-                  <ShareAsideBar title={description} url={url} />
+                  <ShareAsideBar title={title} description={description} url={url} />
                 </header>
 
                 {featImg &&
