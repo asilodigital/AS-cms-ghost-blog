@@ -6,6 +6,7 @@ import dayjs from 'dayjs'
 import { readingTime as readingTimeHelper } from '@lib/readingTime'
 import { resolveUrl } from '@utils/routing'
 import { getLang, get } from '@utils/use-lang'
+import { useTheme } from '@components/contexts/themeProvider'
 
 import { AuthorList } from '@components/AuthorList'
 import { PostClass } from '@helpers/PostClass'
@@ -33,6 +34,7 @@ export const PostCard = ({ settings, post, num, isHome, isBranded }: PostCardPro
   const postClass = PostClass({ tags: post.tags, isFeatured: post.featured, isImage: !!featImg })
   const large = (featImg && isHome && num !== undefined && 0 === num % 6 && `post-card-large`) || ``
   const authors = post?.authors?.filter((_, i) => (i < 2 ? true : false))
+  const { dark } = useTheme()
 
   return (
     <article className={`post-card ${postClass} ${large}`}>
@@ -67,7 +69,7 @@ export const PostCard = ({ settings, post, num, isHome, isBranded }: PostCardPro
             )}
             <header className="post-card-header">
               {post.primary_tag &&
-                <div className="w-[75px] min-h-min min-w-min text-white text-center text-lg font-semibold border border-solid border-gray-100 rounded-[22px] my-4 px-6 py-2">
+                <div className={`w-[75px] min-h-min min-w-min text-${dark === 'dark' ? 'white' : 'black'} text-center text-lg font-semibold border border-solid border-gray-500 rounded-[22px] my-4 px-6 py-2`}>
                   {post.primary_tag.name}
                 </div>
               }
